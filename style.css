@@ -1,0 +1,37 @@
+body {
+  background-color: darkgray;
+  font-family: "Varela Round";
+  margin: 0 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  width: 80%;
+  color: white;
+  padding-left: 50px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: purple;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 10px 0 black;
+}
+
+.navbar ul {
+  color: darkgray;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.navbar ul:hover {
+  -webkit-box-shadow:inset 0px 0px 0px 2px #888;
+  -moz-box-shadow:inset 0px 0px 0px 2px #888;
+  box-shadow:inset 0px 0px 0px 2px #888;
+  color: #292929;
+}
