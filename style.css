@@ -35,3 +35,25 @@ h1 {
   box-shadow:inset 0px 0px 0px 2px #888;
   color: #292929;
 }
+
+.aboutSection {
+  display: flex;
+  justify-content: space-between;
+  background-color: silver;
+  padding: 150px 0px 50px 25px;
+  max-width:  1200px;
+  margin: 0 auto;
+}
+
+.aboutSection p {
+  display: flex;
+  padding: 50px;
+  width: 60%;
+  font-size: 24px;
+  color: white;
+}
+
+.headshot {
+  display: flex;
+  padding: 0px 50px;
+}
