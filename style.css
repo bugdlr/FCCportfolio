@@ -1,7 +1,7 @@
 body {
   background-color: darkgray;
   font-family: "Varela Round";
-  margin: 0 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -36,16 +36,20 @@ h1 {
   color: #292929;
 }
 
-.aboutSection {
-  display: flex;
+.main-content {
+  display: block;
   justify-content: space-between;
+  padding-top: 100px;
   background-color: silver;
-  padding: 150px 0px 50px 25px;
   max-width:  1200px;
   margin: 0 auto;
 }
 
-.aboutSection p {
+.about-section {
+  display: flex;
+}
+
+.about-section p {
   display: flex;
   padding: 50px;
   width: 60%;
@@ -53,7 +57,51 @@ h1 {
   color: white;
 }
 
+.portfolio-section {
+  background-color: #e9e9e9;
+}
+
+.contact-section {
+  background-color: #e9e9e9;
+}
+
 .headshot {
   display: flex;
   padding: 0px 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 200px;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+}
+
+button {
+  width: 60px;
+}
+
+.foot-section {
+  justify-content: space-between;
+  background-color: silver;
+  margin-bottom: 0;
+}
+
+.copy {
+  height: 100px;
+  background-color: purple;
+  padding-top: 10px;
+}
+
+#copywrite {
+  text-align: center;
 }
