@@ -4,7 +4,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   display: flex;
-  flex: 1;
 }
 
 h1 {
@@ -39,12 +38,9 @@ h1 {
 }
 
 .main-content {
-  display: block;
-  justify-content: space-between;
   padding-top: 100px;
   background-color: silver;
   max-width:  1200px;
-  margin: 0 auto;
 }
 
 .about-section {
@@ -53,31 +49,37 @@ h1 {
 }
 
 hr {
-  display: block;
   height: 5px;
   width: 600px;
-  background-color: : white;
+  background-color: white;
+  border: 0;
+  border-radius: 30%;
 }
 
-.about-section p {
-  display: block;
+.about-section {
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
   padding: 50px;
-  width: 60%;
-  font-size: 24px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
   color: white;
+  padding-top: 40px;
 }
 
-.portfolio-section {
-  background-color: #e9e9e9;
-}
-
-.contact-section {
-  background-color: #e9e9e9;
+.titles {
+  font-size: 24px;
 }
 
 .headshot {
   display: flex;
   padding: 0px 50px;
+  max-height: 300px;
+  max-width: auto;
 }
 
 .form {
@@ -99,7 +101,9 @@ button {
   width: 60px;
 }
 
-.foot-section {
+.foot-section p {
+  display: inline-block;
+  flex-direction: row;
   justify-content: space-between;
   background-color: silver;
   margin-bottom: 0;
