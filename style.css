@@ -1,7 +1,7 @@
 body {
   background-color: darkgray;
   font-family: "Varela Round";
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -40,6 +40,7 @@ h1 {
   padding-top: 100px;
   background-color: silver;
   max-width:  1200px;
+  margin: 0 auto;s
 }
 
 .about-section {
@@ -108,8 +109,6 @@ button {
 
 .foot-section p {
   display: inline-block;
-  flex-direction: row;
-  justify-content: space-between;
   background-color: silver;
   margin-bottom: 0;
 }
