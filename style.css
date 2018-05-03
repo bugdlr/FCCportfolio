@@ -97,14 +97,14 @@ hr {
 }
 
 h2 {
-  color: gray;
+  color: #555;
   text-transform: uppercase;
   font-size: 26px;
   text-align: center;
 }
 
 .hr2 {
-  background-color: gray;
+  background-color: #555;
   margin-bottom: 40px;
 }
 
@@ -119,17 +119,55 @@ h2 {
 
 
 /* Contact Section */
+.contact-contents {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
 }
 
-input {
-  width: 200px;
+.form-input {
+width: 350px;
+font-size: 20px;
+border: none;
+background-color: inherit;
+border-bottom: 1px solid #555;
+padding: 10px;
 }
 
-button {
-  width: 60px;
+.form-input:focus {
+outline: none;
+}
+
+#submit {
+  font-size: 22px;
+  margin-top: 30px;
+  width: 100px;
+  border: 1px solid #555;
+  background-color: buttonface;
+  color: #555;
+  line-height: inherit;
+}
+
+#submit:focus {
+  outline: none;
+}
+
+#message {
+  height: 150px;
+}
+
+.contact-instructions {
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  color: #555;
 }
 /* end Contact Section */
 
