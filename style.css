@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Header */
 h1 {
   color: white;
   text-align: center;
@@ -25,6 +26,7 @@ h1 {
   text-align: center;
   max-width: 1024px;
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .navbar ul {
@@ -41,7 +43,10 @@ h1 {
   box-shadow:inset 0px 0px 0px 2px #888;
   color: #292929;
 }
+/* end Header */
 
+
+/**** Main Content ****/
 .main-content {
   padding-top: 100px;
   background-color: silver;
@@ -49,6 +54,7 @@ h1 {
   margin: 0 auto;
 }
 
+/* About Section */
 .about-section {
   display: flex;
   flex-direction: column;
@@ -81,18 +87,38 @@ hr {
   max-height: 300px;
   justify-content: center;
 }
+/* end About Section*/
+
+
+/* Portfolio Section */
+.portfolio-section {
+  background-color: #eee;
+  padding: 40px;
+}
+
+h2 {
+  color: gray;
+  text-transform: uppercase;
+  font-size: 26px;
+  text-align: center;
+}
+
+.hr2 {
+  background-color: gray;
+  margin-bottom: 40px;
+}
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-  grid-gap: 15px;
+  display: block;
 }
 
 .example {
   border: 1px solid black;
 }
+/* end Portfolio Section */
 
+
+/* Contact Section */
 .form {
   display: flex;
   flex-direction: column;
@@ -102,12 +128,15 @@ input {
   width: 200px;
 }
 
-footer {
-  width: 100%;
-}
-
 button {
   width: 60px;
+}
+/* end Contact Section */
+
+
+/* Footer */
+footer {
+  width: 100%;
 }
 
 .foot-section p {
@@ -125,6 +154,7 @@ button {
 #copywrite {
   text-align: center;
 }
+/* end Footer */
 
 
 
@@ -142,7 +172,15 @@ button {
       padding-top: 40px;
   }
 
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 40px;
+  }
+
 }
+
 
 @media (min-width: 769px) {
   .nav-contents {
@@ -180,5 +218,6 @@ button {
   hr {
     width: 500px;
   }
+
 
 }
