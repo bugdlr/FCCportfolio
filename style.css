@@ -1,5 +1,5 @@
 body {
-  background-color: darkgray;
+  background-color: gray;
   font-family: "Varela Round";
   margin: 0 auto;
   box-sizing: border-box;
@@ -11,15 +11,20 @@ h1 {
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   width: 100%;
   padding-bottom: 10px;
   background-color: purple;
   position: fixed;
   top: 0;
   box-shadow: 0 0 10px 0 black;
+}
+
+.nav-contents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .navbar ul {
@@ -126,15 +131,23 @@ button {
 
 /* Media Queries */
 
+@media (min-width: 1024px) {
+  .about-section {
+    margin-top: 0;
+    flex-direction: row;
+    width: auto;
+  }
+}
+
 @media (min-width: 769px) {
-  .navbar {
+  .nav-contents {
     flex-direction: row;
     }
 
   h1 {
-    width: 80%;
-    margin-left: 2em;
     text-align: left;
+    padding-left: 20px;
+    width: 60%;
     }
 
   .navbar ul {
@@ -144,12 +157,7 @@ button {
   }
 
   .main-content {
-    max-width:  1200px;
-  }
-
-  .about-section {
-    margin-top: 0;
-    flex-direction: row;
+    max-width:  1024px;
   }
 
   hr {
