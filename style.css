@@ -26,7 +26,7 @@ h1 {
 .navbar {
   width: 100%;
   background-color: purple;
-  position: absolute;
+  position: fixed;
   top: 0;
   box-shadow: 0 0 10px 0 black;
 }
@@ -127,6 +127,10 @@ h2 {
 
 .example {
   border: 1px solid black;
+  height: 200px;
+  max-width: 350px;
+  margin: 0 auto 20px;
+
 }
 /* end Portfolio Section */
 
@@ -211,7 +215,7 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 1022px) {
   .navbar:hover ul {
     display: inline-block;
     width: inherit;
@@ -232,12 +236,16 @@ footer {
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 40px;
+    justify-content: center;
   }
 
-}
+  .example {
+    min-width: 350px;
+  }
+
 
 
 @media (min-width: 769px) {
