@@ -10,7 +10,7 @@
 body {
   display: block;
   background-color: gray;
-  font-family: "Varela Round";
+  font-family: "Varela Round", sans-serif;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -32,7 +32,6 @@ h1 {
 }
 
 .nav-contents {
-  display: block;
   text-align: center;
   max-width: 1024px;
   margin: 0 auto;
@@ -44,13 +43,19 @@ h1 {
   color: darkgray;
   font-size: 20px;
   margin: auto;
-  padding: 10px;
   -webkit-padding-start: 10px;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 10px;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 
 
-.navbar ul:hover {
+.navbar li:hover {
   -webkit-box-shadow:inset 0px 0px 0px 2px #888;
   -moz-box-shadow:inset 0px 0px 0px 2px #888;
   box-shadow:inset 0px 0px 0px 2px #888;
@@ -72,7 +77,6 @@ h1 {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /*margin-top: 120px;*/
   text-align: center;
 }
 
@@ -151,16 +155,16 @@ h2 {
 }
 
 .form-input {
-width: 100%;
-font-size: 20px;
-border: none;
-background-color: inherit;
-border-bottom: 1px solid #555;
-padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid #555;
+  padding: 10px;
 }
 
 .form-input:focus {
-outline: none;
+  outline: none;
 }
 
 #submit {
@@ -169,7 +173,6 @@ outline: none;
   width: 100px;
   border: 1px solid #555;
   color: #555;
-  line-height: inherit;
 }
 
 #submit:focus {
@@ -245,26 +248,25 @@ footer {
   .example {
     min-width: 350px;
   }
-
+}
 
 
 @media (min-width: 769px) {
   .nav-contents {
     display: flex;
     flex-direction: row;
-    }
+  }
 
   h1 {
     display: flex;
     text-align: left;
     padding-left: 20px;
     width: 60%;
-    }
+  }
 
   .navbar ul {
     display: flex;
     padding: 10px 20px;
-    margin-right: 50px;
     justify-content: space-between;
   }
 
@@ -289,11 +291,11 @@ footer {
   }
 
   .contact-contents {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .form-input {
