@@ -17,10 +17,9 @@ body {
 
 /* Header */
 h1 {
-  display: block;
+  display: flex;
   color: white;
-  width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .navbar {
@@ -32,10 +31,17 @@ h1 {
 }
 
 .nav-contents {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   max-width: 1024px;
   margin: 0 auto;
   text-transform: uppercase;
+}
+
+.menu {
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
 }
 
 .navbar ul {
@@ -44,6 +50,11 @@ h1 {
   font-size: 20px;
   margin: auto;
   -webkit-padding-start: 10px;
+}
+
+.menu:hover li {
+  display: inline-block;
+  width: inherit;
 }
 
 .navbar li {
@@ -217,10 +228,7 @@ footer {
 /* Media Queries */
 
 @media (max-width: 1022px) {
-  .navbar:hover ul {
-    display: inline-block;
-    width: inherit;
-  }
+
 }
 
 @media (min-width: 1023px) {
@@ -260,6 +268,10 @@ footer {
     text-align: left;
     padding-left: 20px;
     width: 60%;
+  }
+
+  .menu {
+    display: none;
   }
 
   .navbar ul {
