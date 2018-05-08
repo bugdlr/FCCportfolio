@@ -1,0 +1,29 @@
+{
+  "name": "fccportfolio",
+  "version": "1.0.0",
+  "description": "This is my freeCodeCamp portfolio site project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugdlr/FCCportfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bugdlr/FCCportfolio/issues"
+  },
+  "homepage": "https://github.com/bugdlr/FCCportfolio#readme",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "path": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-rename": "latest",
+    "gulp-watch": "latest",
+    "gulp-connect": "latest",
+    "gulp-open": "latest"
+  }
+}

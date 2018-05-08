@@ -4,9 +4,6 @@
 */
 
 
-
-
-
 body {
   display: block;
   background-color: gray;
@@ -52,10 +49,10 @@ h1 {
   -webkit-padding-start: 10px;
 }
 
-.menu:hover li {
-  display: inline-block;
-  width: inherit;
+.menu:hover ul {
+  display: block;
 }
+
 
 .navbar li {
   display: inline-block;
@@ -274,9 +271,13 @@ footer {
     display: none;
   }
 
+  .dropdown:hover ul {
+    display: flex;
+  }
+
   .navbar ul {
     display: flex;
-    padding: 10px 20px;
+    padding: 20px 20px;
     justify-content: space-between;
   }
 
