@@ -53,8 +53,6 @@ h1 {
   cursor: pointer;
 }
 
-
-
 .navbar li:hover {
   -webkit-box-shadow:inset 0px 0px 0px 2px #888;
   -moz-box-shadow:inset 0px 0px 0px 2px #888;
