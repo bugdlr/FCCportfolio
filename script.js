@@ -3,6 +3,8 @@ const footer = document.getElementById('copywrite');
 const hdlr = document.querySelector('h1');
 footer.innerHTML = `Hannah De Los Reyes &copy;${theDate}. All Rights Reserved`;
 
+
+// *********** Menu Toggle ************
 const menu = document.querySelector('.menu');
 const dropdown = document.querySelector('ul');
 
@@ -24,3 +26,10 @@ window.addEventListener('resize', () => {
     dropdown.style.display = "none";
   }
 })
+// ********** Menu Toggle End *********** //
+
+function scrollLocation () {
+  console.log(window.scrollY);
+}
+
+window.addEventListener('scroll', scrollLocation());
