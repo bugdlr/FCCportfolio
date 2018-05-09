@@ -32,6 +32,7 @@ gulp.task('connect', () => {
 gulp.task('watch', () => {
   gulp.watch('less/*.less', ['less']);
   gulp.watch('index.html', ['html']);
+  gulp.watch('script.js', ['html']);
 });
 
 gulp.task('open', () => {

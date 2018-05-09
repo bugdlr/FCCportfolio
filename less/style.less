@@ -14,9 +14,10 @@ body {
 
 /* Header */
 h1 {
-  display: flex;
+  display: inline-block;
   color: white;
-  text-align: left;
+  padding: 20px 40px 20px;
+  margin: 0;
 }
 
 .navbar {
@@ -28,7 +29,6 @@ h1 {
 }
 
 .nav-contents {
-  display: flex;
   justify-content: space-around;
   max-width: 1024px;
   margin: 0 auto;
@@ -36,16 +36,21 @@ h1 {
 }
 
 .menu {
+  display: inline-block;
+  float: right;
   color: white;
   font-size: 20px;
-  padding-top: 10px;
+  padding-top: 25px;
+  padding-right: 50px;
+  margin: 0 auto;
 }
 
 .navbar ul {
   display: none;
+  justify-content: center;
   color: darkgray;
   font-size: 20px;
-  margin: auto;
+  margin-top: 0;
   -webkit-padding-start: 10px;
 }
 
@@ -219,8 +224,10 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 1022px) {
-
+@media (max-width: 768px) {
+  ul {
+    display: none;
+  }
 }
 
 @media (min-width: 1023px) {
@@ -266,13 +273,10 @@ footer {
     display: none;
   }
 
-  .dropdown:hover ul {
-    display: flex;
-  }
-
   .navbar ul {
     display: flex;
     padding: 20px 20px;
+    margin: 0;
     justify-content: space-between;
   }
 
