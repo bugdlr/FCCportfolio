@@ -1,10 +1,4 @@
-const theDate = new Date().getFullYear();
-const footer = document.getElementById('copywrite');
-const hdlr = document.querySelector('h1');
-footer.innerHTML = `Hannah De Los Reyes &copy;${theDate}. All Rights Reserved`;
-
-
-// *********** Menu Toggle ************
+// *********** Menu Dropdown ************ //
 const menu = document.querySelector('.menu');
 const dropdown = document.querySelector('ul');
 
@@ -26,14 +20,10 @@ window.addEventListener('resize', () => {
     dropdown.style.display = "none";
   }
 })
-// ********** Menu Toggle End *********** //
+// ********** Menu Dropdown End *********** //
 
-// function scrollLocation () {
-//   console.log(window.scrollY);
-// }
-//
-// window.addEventListener('scroll', scrollLocation());
 
+// ********** Menu Scroll ************ //
 const aboutNav = document.getElementById('about-nav');
 const portNav = document.getElementById('portfolio-nav');
 const contactNav = document.getElementById('contact-nav');
@@ -84,7 +74,16 @@ portNav.addEventListener('click', () => {
 
 contactNav.addEventListener('click', () => {
   window.scrollTo({
-    top: contactPosition,
+    top: (contactPosition - 140),
     behavior: "smooth"
   });
 })
+// ********** End Menu Scroll *********** //
+
+
+// ********** Copywrite Year *********** //
+const theDate = new Date().getFullYear();
+const footer = document.getElementById('copywrite');
+const hdlr = document.querySelector('h1');
+footer.innerHTML = `Hannah De Los Reyes &copy;${theDate}. All Rights Reserved`;
+// **********  End Copywrite Year *********** //
