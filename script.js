@@ -33,3 +33,58 @@ window.addEventListener('resize', () => {
 // }
 //
 // window.addEventListener('scroll', scrollLocation());
+
+const aboutNav = document.getElementById('about-nav');
+const portNav = document.getElementById('portfolio-nav');
+const contactNav = document.getElementById('contact-nav');
+const aboutSection = document.querySelector('.about-section');
+const portfolioSection = document.querySelector('.portfolio-section');
+const contactSection = document.querySelector('.contact-section');
+
+function getPosition(el) {
+  let yPos = 0;
+  while (el) {
+    if (el.tagName == "body") {
+      let yScroll = el.scrollTop || document.documentElement.scrollTop;
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+    el = el.offsetParent;
+  }
+  return yPos;
+}
+
+let portPosition = getPosition(portfolioSection);
+let contactPosition = getPosition(contactSection);
+
+
+function updatePositions() {
+  portPosition = getPosition(portfolioSection);
+  contactPosition = getPosition(contactSection);
+}
+
+window.addEventListener("scroll", updatePositions, false);
+window.addEventListener("resize", updatePositions, false);
+
+
+aboutNav.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+})
+
+portNav.addEventListener('click', () => {
+  window.scrollTo({
+    top: (portPosition - 70),
+    behavior: "smooth"
+  });
+})
+
+contactNav.addEventListener('click', () => {
+  window.scrollTo({
+    top: contactPosition,
+    behavior: "smooth"
+  });
+})
