@@ -28,8 +28,8 @@ window.addEventListener('resize', () => {
 })
 // ********** Menu Toggle End *********** //
 
-function scrollLocation () {
-  console.log(window.scrollY);
-}
-
-window.addEventListener('scroll', scrollLocation());
+// function scrollLocation () {
+//   console.log(window.scrollY);
+// }
+//
+// window.addEventListener('scroll', scrollLocation());
