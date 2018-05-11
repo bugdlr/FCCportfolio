@@ -31,55 +31,39 @@ const aboutSection = document.querySelector('.about-section');
 const portfolioSection = document.querySelector('.portfolio-section');
 const contactSection = document.querySelector('.contact-section');
 
-function getPosition(el) {
-  let yPos = 0;
-  while (el) {
-    if (el.tagName == "body") {
-      let yScroll = el.scrollTop || document.documentElement.scrollTop;
-      yPos += (el.offsetTop - yScroll + el.clientTop);
-    } else {
-      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
-    }
-    el = el.offsetParent;
-  }
-  return yPos;
+// function getPosition(el) {
+//   let yPos = 0;
+//   while (el) {
+//     if (el.tagName == "body") {
+//       let yScroll = el.scrollTop || document.documentElement.scrollTop;
+//       yPos += (el.offsetTop - yScroll + el.clientTop);
+//     } else {
+//       yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+//     }
+//     el = el.offsetParent;
+//   }
+//   return yPos;
+// }
+
+function getOffset(el) {
+  el = el.getBoundingClientRect();
+  return el.top;
 }
 
-let portPosition = getPosition(portfolioSection);
-let contactPosition = getPosition(contactSection);
+let portPosition = getOffset(portfolioSection);
+let contactPosition = getOffset(contactSection);
 
 
-function updatePositions() {
-  portPosition = getPosition(portfolioSection);
-  contactPosition = getPosition(contactSection);
+function updateOffset() {
+  portPosition = getOffset(portfolioSection);
+  contactPosition = getOffset(contactSection);
 }
 
-window.addEventListener("scroll", updatePositions, false);
-window.addEventListener("resize", updatePositions, false);
-
-
-// aboutNav.addEventListener('click', () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth"
-//   });
-// })
-//
-// portNav.addEventListener('click', () => {
-//   window.scrollTo({
-//     top: (portPosition - 70),
-//     behavior: "smooth"
-//   });
-// })
-//
-// contactNav.addEventListener('click', () => {
-//   window.scrollTo({
-//     top: (contactPosition - 140),
-//     behavior: "smooth"
-//   });
-// })
+window.addEventListener("scroll", updateOffset, false);
+window.addEventListener("resize", updateOffset, false);
 
 let a = [0, portPosition - 70, contactPosition - 140];
+// variable values are not updating
 
 [aboutNav, portNav, contactNav].forEach((el, i) => {
   el.addEventListener('click', () => {
@@ -89,6 +73,36 @@ let a = [0, portPosition - 70, contactPosition - 140];
     });
   })
 });
+
+function aboutHighlight() {
+  if (portPosition > 250) {
+    aboutNav.style.backgroundColor = "white";
+  } else {
+    aboutNav.style.backgroundColor = "inherit";
+  }
+}
+
+function portHighlight() {
+  if (portPosition < 250 && contactPosition > 450) {
+    portNav.style.backgroundColor = "white";
+  } else {
+    portNav.style.backgroundColor = "inherit";
+  }
+}
+
+function contactHighlight() {
+  if (contactPosition < 450) {
+    contactNav.style.backgroundColor = "white";
+  } else {
+    contactNav.style.backgroundColor = "inherit";
+  }
+}
+
+
+window.addEventListener("scroll", aboutHighlight, false);
+window.addEventListener("scroll", portHighlight, false);
+window.addEventListener("scroll", contactHighlight, false);
+
 
 // ********** End Menu Scroll *********** //
 
