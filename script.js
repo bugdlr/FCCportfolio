@@ -58,26 +58,38 @@ window.addEventListener("scroll", updatePositions, false);
 window.addEventListener("resize", updatePositions, false);
 
 
-aboutNav.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-})
+// aboutNav.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth"
+//   });
+// })
+//
+// portNav.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: (portPosition - 70),
+//     behavior: "smooth"
+//   });
+// })
+//
+// contactNav.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: (contactPosition - 140),
+//     behavior: "smooth"
+//   });
+// })
 
-portNav.addEventListener('click', () => {
-  window.scrollTo({
-    top: (portPosition - 70),
-    behavior: "smooth"
-  });
-})
+let a = [0, portPosition - 70, contactPosition - 140];
 
-contactNav.addEventListener('click', () => {
-  window.scrollTo({
-    top: (contactPosition - 140),
-    behavior: "smooth"
-  });
-})
+[aboutNav, portNav, contactNav].forEach((el, i) => {
+  el.addEventListener('click', () => {
+    window.scrollTo({
+      top: a[i],
+      behavior: "smooth"
+    });
+  })
+});
+
 // ********** End Menu Scroll *********** //
 
 
