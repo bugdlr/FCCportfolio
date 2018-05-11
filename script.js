@@ -59,11 +59,12 @@ function updateOffset() {
   contactPosition = getOffset(contactSection);
 }
 
+
 window.addEventListener("scroll", updateOffset, false);
 window.addEventListener("resize", updateOffset, false);
 
 let a = [0, portPosition - 70, contactPosition - 140];
-// variable values are not updating
+// can't access the variables inside of updateOffset
 
 [aboutNav, portNav, contactNav].forEach((el, i) => {
   el.addEventListener('click', () => {
