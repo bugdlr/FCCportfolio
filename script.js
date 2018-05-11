@@ -31,40 +31,27 @@ const aboutSection = document.querySelector('.about-section');
 const portfolioSection = document.querySelector('.portfolio-section');
 const contactSection = document.querySelector('.contact-section');
 
-// function getPosition(el) {
-//   let yPos = 0;
-//   while (el) {
-//     if (el.tagName == "body") {
-//       let yScroll = el.scrollTop || document.documentElement.scrollTop;
-//       yPos += (el.offsetTop - yScroll + el.clientTop);
-//     } else {
-//       yPos += (el.offsetTop - el.scrollTop + el.clientTop);
-//     }
-//     el = el.offsetParent;
-//   }
-//   return yPos;
-// }
 
-function getOffset(el) {
+function getPosition(el) {
   el = el.getBoundingClientRect();
   return el.top;
 }
 
-let portPosition = getOffset(portfolioSection);
-let contactPosition = getOffset(contactSection);
+let portPosition = getPosition(portfolioSection);
+let contactPosition = getPosition(contactSection);
 
 
-function updateOffset() {
-  portPosition = getOffset(portfolioSection);
-  contactPosition = getOffset(contactSection);
+function updatePosition() {
+  portPosition = getPosition(portfolioSection);
+  contactPosition = getPosition(contactSection);
 }
 
 
-window.addEventListener("scroll", updateOffset, false);
-window.addEventListener("resize", updateOffset, false);
+window.addEventListener("scroll", updatePosition, false);
+window.addEventListener("resize", updatePosition, false);
 
 let a = [0, portPosition - 70, contactPosition - 140];
-// can't access the variables inside of updateOffset
+// can't access the variables inside of updatePosition
 
 [aboutNav, portNav, contactNav].forEach((el, i) => {
   el.addEventListener('click', () => {
