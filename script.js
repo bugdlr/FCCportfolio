@@ -23,7 +23,7 @@ window.addEventListener('resize', () => {
 // ********** Menu Dropdown End *********** //
 
 
-// ********** Menu Scroll ************ //
+// ********** Menu ************ //
 const aboutNav = document.getElementById('about-nav');
 const portNav = document.getElementById('portfolio-nav');
 const contactNav = document.getElementById('contact-nav');
@@ -32,6 +32,24 @@ const portfolioSection = document.querySelector('.portfolio-section');
 const contactSection = document.querySelector('.contact-section');
 
 
+// Menu Scroll
+aboutNav.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+})
+
+portNav.addEventListener('click', () => {
+  portfolioSection.scrollIntoView({behavior: "smooth", block: "start"});
+})
+
+contactNav.addEventListener('click', () => {
+  contactSection.scrollIntoView({behavior: "smooth", block: "start"});
+})
+
+
+// Menu Highlight
 function getPosition(el) {
   el = el.getBoundingClientRect();
   return el.top;
@@ -46,21 +64,8 @@ function updatePosition() {
   contactPosition = getPosition(contactSection);
 }
 
-
 window.addEventListener("scroll", updatePosition, false);
 window.addEventListener("resize", updatePosition, false);
-
-let a = [0, portPosition - 70, contactPosition - 140];
-// can't access the variables inside of updatePosition
-
-[aboutNav, portNav, contactNav].forEach((el, i) => {
-  el.addEventListener('click', () => {
-    window.scrollTo({
-      top: a[i],
-      behavior: "smooth"
-    });
-  })
-});
 
 function aboutHighlight() {
   if (portPosition > 250) {
@@ -71,7 +76,7 @@ function aboutHighlight() {
 }
 
 function portHighlight() {
-  if (portPosition < 250 && contactPosition > 450) {
+  if (portPosition < 250 && contactPosition > 700) {
     portNav.style.backgroundColor = "white";
   } else {
     portNav.style.backgroundColor = "inherit";
@@ -79,20 +84,19 @@ function portHighlight() {
 }
 
 function contactHighlight() {
-  if (contactPosition < 450) {
+  if (contactPosition < 700) {
     contactNav.style.backgroundColor = "white";
   } else {
     contactNav.style.backgroundColor = "inherit";
   }
 }
 
-
 window.addEventListener("scroll", aboutHighlight, false);
 window.addEventListener("scroll", portHighlight, false);
 window.addEventListener("scroll", contactHighlight, false);
 
 
-// ********** End Menu Scroll *********** //
+// ********** End Menu *********** //
 
 
 // ********** Copywrite Year *********** //
