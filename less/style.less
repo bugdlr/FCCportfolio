@@ -221,18 +221,47 @@ footer {
 }
 
 .foot-section {
-  display: flex;
-  justify-content: space-around;
+  display: block;
+  text-align: center;
   background-color: silver;
+  color: white;
+  font-size: 20px;
 }
 
-.foot-section p {
-  color: white;
-  
+.foot-contents {
+  padding: 20px 0;
 }
 
 .foot-heads {
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+#made {
+  font-size: 18px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.around-the-web ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+
+}
+
+.around-the-web li {
+  padding: 5px;
+  color: white;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
+
+svg::hover {
+  color: blue;
 }
 
 .copy {
@@ -251,7 +280,7 @@ footer {
 /* Media Queries */
 
 @media (max-width: 768px) {
-  ul {
+  .navbar ul {
     display: none;
   }
 }
@@ -342,5 +371,18 @@ footer {
   .contact-instructions {
     width: 40%;
   }
+
+  .foot-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+  #made {
+    width: 200px;
+  }
+
 
 }
