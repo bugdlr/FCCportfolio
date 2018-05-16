@@ -98,22 +98,6 @@ window.addEventListener("scroll", contactHighlight, false);
 
 // ********** End Menu *********** //
 
-// ********** Social Media *********** //
-const linkedin = document.getElementById('linkedin');
-const github = document.getElementById('github');
-
-function hoverColor(el) {
-    el.addEventListener('mouseover', () => {
-      el.setAttribute("fill", "#888")
-    });
-    el.addEventListener('mouseout', () => {
-      el.setAttribute("fill", "#fff")
-    });
-}
-
-hoverColor(linkedin);
-hoverColor(github);
-
 // ********** Copywrite Year *********** //
 const theDate = new Date().getFullYear();
 const footer = document.getElementById('copywrite');
