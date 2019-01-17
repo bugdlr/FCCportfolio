@@ -8,6 +8,7 @@ body {
   background-color: gray;
   font-family: "Varela Round", sans-serif;
   margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -103,13 +104,17 @@ hr {
   padding-top: 0;
 }
 
+.about-text p {
+  width: 70%;
+  margin: 10px auto;
+}
+
 .titles {
   font-size: 24px;
 }
 
 .headshot {
   display: flex;
-  max-height: 300px;
   justify-content: center;
 }
 /* end About Section*/
@@ -313,6 +318,14 @@ svg {
 @media (max-width: 768px) {
   .navbar ul {
     display: none;
+    padding-right: 22px;
+  }
+  .nav-contents {
+    padding-right: 50px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -324,8 +337,8 @@ svg {
   }
 
   .about-text {
-      width: 70%;
-      padding-top: 40px;
+    width: 70%;
+    padding-top: 40px;
   }
 
   .example {

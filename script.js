@@ -50,14 +50,14 @@ contactNav.addEventListener('click', () => {
 
 
 // Menu Highlight
+let portPosition = getPosition(portfolioSection);
+let contactPosition = getPosition(contactSection);
+
+
 function getPosition(el) {
   el = el.getBoundingClientRect();
   return el.top;
 }
-
-let portPosition = getPosition(portfolioSection);
-let contactPosition = getPosition(contactSection);
-
 
 function updatePosition() {
   portPosition = getPosition(portfolioSection);
