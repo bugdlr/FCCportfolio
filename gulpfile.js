@@ -9,35 +9,47 @@ const watch = require('gulp-watch');
 const connect = require('gulp-connect');
 const open = require('gulp-open');
 
-gulp.task('less', () => {
+function css(done) {
   return gulp.src('less/**/*.less')
     .pipe(less())
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
-});
+    done();
+};
 
-gulp.task('html', () => {
+function html(done) {
   return gulp.src('index.html')
     .pipe(connect.reload());
-});
+    done();
+};
 
-gulp.task('connect', () => {
+function server(done) {
   connect.server({
     livereload: true
   });
-});
+  done();
+};
 
-gulp.task('watch', () => {
-  gulp.watch('less/*.less', ['less']);
-  gulp.watch('index.html', ['html']);
-  gulp.watch('script.js', ['html']);
-});
+function watching(done) {
+  gulp.watch('less/*.less', css);
+  gulp.watch('index.html', html);
+  gulp.watch('script.js', html);
+  done();
+};
 
-gulp.task('open', () => {
+function opening(done) {
   gulp.src('index.html')
   .pipe(open({uri: 'http://localhost:8080/'}));
-});
+  done();
+};
 
-gulp.task('default', [ 'less', 'html', 'watch', 'connect', 'open' ]);
+
+gulp.task("css", css);
+gulp.task("html", html);
+gulp.task("watching", watching);
+gulp.task("server", server);
+gulp.task("opening", opening);
+
+gulp.task('default', gulp.parallel(css, html, watching, server, opening));

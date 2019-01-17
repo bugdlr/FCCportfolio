@@ -121,6 +121,39 @@ hr {
   padding: 40px;
 }
 
+.portfolio-grid {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+  // grid-gap: 50px;
+  margin: 20px auto;
+}
+
+.portfolio-grid img {
+  margin: 0 auto;
+  height: 242px;
+  width: 400px;
+}
+
+.portfolio-grid  p {
+  background-color: #bcd2d0;
+  padding: 12px;
+  margin-top: -4px;
+  border-top: 1px solid #4f372d;
+  text-align: center;
+}
+
+.project-tile {
+  max-width: 400px;
+  height: 285px;
+  border: 1px solid #4f372d;
+  margin: 20px;
+}
+
+
 h2 {
   color: #555;
   text-transform: uppercase;
@@ -133,16 +166,11 @@ h2 {
   margin-bottom: 40px;
 }
 
-.portfolio-grid {
-  display: block;
-}
-
 .example {
   border: 1px solid black;
   height: 200px;
   max-width: 350px;
   margin: 0 auto 20px;
-
 }
 /* end Portfolio Section */
 
@@ -266,7 +294,6 @@ svg {
 }
 
 
-
 .copy {
   height: 60px;
   background-color: purple;
@@ -299,14 +326,6 @@ svg {
   .about-text {
       width: 70%;
       padding-top: 40px;
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 40px;
-    justify-content: center;
   }
 
   .example {
@@ -347,7 +366,8 @@ svg {
     margin-top: 0;
   }
 
-  .about-text {    text-align: center;
+  .about-text {
+    text-align: center;
     padding-right: 20px;
   }
 
